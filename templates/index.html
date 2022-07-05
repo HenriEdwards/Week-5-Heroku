@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+	<title>Home</title>
+<Body background="background_image.jpg"> <br>  
+
+</head>
+<Body style="background-color:powderblue;">  
+
+<center> 
+	<header>
+		<div class="container">
+
+		<h2 style="font-family:verdana;">Salary Predictor</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p style="font-family:verdana;">Enter Years of Experience</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="comment" rows="4" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="Make Prediction">
+		
+	</form>
+	<br>
+	<br>
+	{{ prediction_text }}
+		
+	</div>
+	
+</center> 
+</body>
+</html>
+
+
